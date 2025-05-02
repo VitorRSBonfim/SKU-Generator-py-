@@ -19,7 +19,14 @@ print("Hello, Wolrd!!")
 # Estrutura SKC sc + 020525 + 0000000001 + 0000000001  
 # Estrutura SKU 00000000014d42
 # Adicionar 000 ao id, se o ID for 1 adicionar 9 zeros ao início do ID ID deverá ser adicionado na criação do SKC em uma linha separada de forma que seja possível comparar o ID recém criado com o id original (sem adição dos 0)
-#Modelo DB ----> id | nome | dt de criação | token criador | sku | skc | id skc | id cor
+#                                                            baseado no id (comparação)
+#                                                                  SKC inteiro para confirmação com os dados separados
+                                                                                  #Deve ser único
+                                                                                           #Irrelevante  
+#Modelo DB ----> id | nome | dt de criação | token criador | sku | skc | skc_ini | id skc | id cor | id variação produtos |
+
+# Etapas verificação / Criação.
+# Verificiação disponibilidade 
 
 sku_JSON = '{"id" : id, id_comparador : id_comparador ,nome : "nome", dt_cr : dt_cr, token_cr : "token_cr", }'
 
