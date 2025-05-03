@@ -28,6 +28,33 @@ print("Hello, Wolrd!!")
 # Etapas verificação / Criação.
 # Verificiação disponibilidade 
 
+
+# Conectando ao banco de dados MYSQL
+
+import mysql.connector
+
+# caminho db
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="catalogoProdutos"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM allProducts")
+
+myresult = mycursor.fetchall()
+a = 0
+for a in myresult:
+  print(a[5])
+
+# Criando SKU
+
+# Utilizando 
+
 sku_JSON = '{"id" : id, id_comparador : id_comparador ,nome : "nome", dt_cr : dt_cr, token_cr : "token_cr", }'
 
 x = '{"marca" : "nissan"}'
